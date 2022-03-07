@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFOHome</title>
+    <style type="text/css">
+        body
+        {
+            font-size: 80%;
+            font-family: "Roboto", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            letter-spacing: 0.15em;
+            background-color: #0F0E0F;
+
+        }
+        .page
+            {
+                max-width: 1080px;
+                min-width: 720px;
+                margin: 2px auto 2px auto;
+                border: 2px double #03afce;
+            }
+        .logo
+            {
+                width: 150px;
+                margin: 10px auto 25px;
+                text-align: center;
+            }
+        ul
+        {
+            width: 900px;
+            padding: 10px;
+            margin: 0px auto 0px auto;
+            border-top: 2px solid #9F33FF;
+            border-bottom: 1px solid #9F33FF;
+            text-align:center;
+        }
+        li
+        {
+            display: inline;
+        }
+
+        p
+        {
+            text-align: center;
+            width: 600px;
+            margin: 20px auto 20px auto;
+            font-weight: normal;
+            color: deeppink;
+        }
+        a
+        {
+            color: aqua;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 6px 18px 5px 18px;
+        }
+        a:hover,a.actual{
+            color: #9F33FF;
+            background-color: #BABAD2;
+        };
+
+        .forms{
+            align-items: center;
+            border:double;
+            width: max-content;
+        }
+
+        .confr
+        {   
+            text-align: center;  
+            border:double;
+            align-items:center
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="logo">
+            <img src="img/UFOlogo1.png"
+                width="140" 
+                height="140" 
+                alt="Logo UFO CS"
+            />
+        </div>
+        <ul class="nav" id="nav">
+            <li>
+                <a href="index.html" >Home</a> 
+            </li>
+            <li>
+                <a href="Product Catalog.html" >Product Catalog</a> 
+            </li>
+            <li>
+                <a href="Order now.html" class="actual" >Order now</a> 
+            </li>
+            <li>
+                <a href="Admin.html" >Admin</a> 
+            </li>
+        </ul>
+        <br>
+        <section class="forms" style="color: greenyellow;">
+            <div>
+                <p>CUSTOMER DETAILS</p>
+
+                <ul class="forms">
+                    <label for="name">Name</label><br>
+                    <input type="name" id="name" name="name"><br><br>
+
+                    <label for="email">E-mail</label><br>
+                    <input type="email" id="email" name="email"><br><br>
+                    
+                    <label for="phonenumber">Phone number </label><br>
+                    <input class="forms" type="phonenumber" id="phonenumber" name="phonenumber"  maxlength="10"><br><br>
+                    
+                    <label for="address">Address</label><br>
+                    <input type="address" id="address" name="address"><br><br>
+
+                    <label for="description">Description (notes)</label><br>
+                    <input type="description" id="description" name="description"><br><br>
+                    
+                    <label for="datedelivery">Date and time of delivery</label><br><br>
+                    <input type="date" id="date1" name="date1"><br>
+                    <br>
+                    <input type="time" id="time1" name="time1"><br>
+                    <br><br>
+                </ul>
+                <hr style="border-color: #b3e60b;">
+                <p>ORDER DETAILS</p>
+
+                <ul class="forms">
+
+                    <label for="pcs">How many cakes do you want?</label><br><br>
+                    <input type="number" id="pcs" name="pcs"><br><br>
+                    <label for="units">Do you want to combine flavors in your cake?</label><br><br>
+                    <input list="units">
+                        <datalist id="units">
+                            <option value="Yes, please">
+                            <option value="No, thanks">
+                        </datalist>
+                    <br><br>   
+                    <label for="flavors">What flavors would you like to combine in your cake (max. 2)?</label><br><br>
+                        <input type="checkbox" id="flav1" name="flav1" value="UFO Cake">
+                            <label for="flav1">UFO Cake</label><br>
+                        <input type="checkbox" id="flav2" name="flav2" value="Astro Cake">
+                            <label for="flav2">Astro Cake</label><br>
+                        <input type="checkbox" id="flav3" name="flav3" value="Alien Cake">
+                            <label for="flav3">Alien Cake</label><br>
+                        <input type="checkbox" id="flav4" name="flav4" value="Galaxy Cake">
+                            <label for="flav4">Galaxy Cake</label><br>
+                        <input type="checkbox" id="flav5" name="flav5" value="Astronaut Cake">
+                            <label for="flav5">Astronaut Cake</label><br>
+                    <br><br>
+                    
+                    <label for="flavors">Do you want to add decoration to your cake?</label><br><br>
+                    <input list="add">
+                        <datalist id="add">
+                            <option value="Yes, please">
+                            <option value="No, thanks">
+                        </datalist>
+                    <br><br>
+
+                    <label for="arts">How many decorative items would you like to add?</label><br><br>
+                        <input type="radio" id="One" name="arts" value="One">
+                            <label for="One">One</label><br>
+                        <input type="radio" id="Two" name="arts" value="Two">
+                            <label for="Two">Two</label><br>
+                        <input type="radio" id="Three" name="arts" value="Three">
+                            <label for="Three">Three</label><br>
+                        <input type="radio" id="Four" name="arts" value="Four">
+                            <label for="Four">Four or more</label><br>
+                    
+                    <br><br>   
+                    <label for="types">What type would you like (max. 3)?</label><br><br>
+                        <input type="checkbox" id="type1" name="type1" value="Rockets">
+                            <label for="type1">Rockets</label><br>
+                        <input type="checkbox" id="type2" name="type2" value="Stars">
+                            <label for="type2">Stars</label><br>
+                        <input type="checkbox" id="type3" name="type3" value="Asteriods">
+                            <label for="type3">Asteriods</label><br>
+                        <input type="checkbox" id="type4" name="type4" value="Medals">
+                            <label for="Type4">Medals</label><br>
+                        <input type="checkbox" id="type5" name="type5" value="Comets">
+                            <label for="Type5">Comets</label><br>
+                    <br><br>
+
+                </ul>
+                <hr style="border-color: #b3e60b;">
+
+                <p>CONFIRM</p>
+
+                <ul class="confr">
+                    <br>
+                    <input type="reset" value="CANCEL"><br><br>
+                    <input type="submit" id="submit" name="submit" value="CONFIRM ORDER" onclick="alert('We have received your order');"><br><br>
+                </ul>
+
+            </div>
+            
+        </section>
+        
+        <p>
+            Welcome human lover of flavor, cakes and something more...
+        </p>
+    </div>
+    <br>
+    <br>
+    <ul >
+        <li>
+            <a href="https://www.instagram.com/" >Instagram</a> 
+        </li>
+        <li>
+            <a href="https://www.facebook.com/" >Facebook</a> 
+        </li>
+        <li>
+            <a href="https://web.whatsapp.com/" >Whatsapp</a> 
+        </li>
+    </ul>
+    <br>
+    <p style="color: rgb(239, 235, 240)">
+        <b>
+        (732) 449-0405
+        307 Old Mill Rd
+        Spring Lake, New Jersey(NJ), 07762
+        <br>
+        Open from 10 am to 8 pm
+        <br>
+        365 days a year
+        </b>
+    </p>
+    <p style="color: chartreuse">
+        <br>
+        <i>
+        UFO Cake Shop. 
+        All Rights Reserved.
+        </i>
+    </p>
+
+</body>
+</html>
